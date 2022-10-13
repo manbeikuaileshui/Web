@@ -1,0 +1,39 @@
+<!-- 
+    overflow属性指定了如果内容溢出一个元素的框(超过其指定高度及宽度)时，会发生什么。
+        overflow: visible; 显示超出内容，默认
+        overflow: hidden; 不显示超出内容
+        overflow: scroll; 超出时显示滚动条
+        overflow: auto; 总是显示滚动条
+    一般情况下，我们都不想让溢出的内容显示出来，因为溢出的部分会影响布局。
+    但是如果有定位盒子，请慎用overflow: hidden; 因为它会隐藏多余的部分。
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .peppa {
+            /* overflow: visible; */
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+            overflow: auto;
+            width: 200px;
+            height: 200px;
+            border: 3px solid pink;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="peppa">
+        的地方领导是奇偶覅哦冻死了附近的是佛ID法规及欧违法费金额无法九万里
+        父类的覅结构解放了电视剧佛公解耦为金佛为金佛耳机访问if就log解耦囧福
+        建省领导覅二级头浪费较大酸辣粉个囧反对浪费IE金佛而过即热哦圣诞节福利
+        司法局饿哦无附件为or覅金额为复工诶对方水电费第三方东方闪电
+    </div>
+</body>
+</html>

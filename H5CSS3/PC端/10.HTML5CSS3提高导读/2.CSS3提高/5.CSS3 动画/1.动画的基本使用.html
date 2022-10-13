@@ -1,0 +1,58 @@
+<!-- 
+    动画(animation)是CSS3中具有颠覆性的特征之一，可通过设置多个节点来精确控制一个或一组动画，常用来实现复杂的动画效果。
+    相比较过渡，动画可以实现更多变化，更多控制，连续自动播放等效果。
+    制作动画分为两步:
+        1.先定义动画(用keyframes定义动画，类似定义类选择器)
+        @keyframes 动画名称 {
+            0%或from {
+                width: 100px;
+            }
+            100%或to {
+                width: 200px;
+            }
+        }
+        2.再使用(调用)动画
+            元素使用动画
+            div {
+                /* 调用动画 */
+                animation-name: 动画名称;
+                /* 持续时间 */
+                animation-duration: 持续时间;
+            }
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 我们向页面以打开，一个盒子就从左边走到右边 */
+        /* 1.定义动画 */
+        @keyframes move {
+            /* 开始状态 */
+            from {
+                transform: translate(0,0);
+            }
+            /* 结束状态 */
+            to {
+                transform: translateX(1000px);
+            }
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 2.调用动画 */
+            /* 动画名称 */
+            animation-name: move;
+            /* 持续时间 */
+            animation-duration: 2s;
+        }
+    </style>
+ </head>
+ <body>
+    <div></div>
+ </body>
+ </html>

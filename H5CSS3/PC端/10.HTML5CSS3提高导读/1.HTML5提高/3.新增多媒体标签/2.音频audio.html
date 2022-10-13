@@ -1,0 +1,43 @@
+<!-- 
+    HTML5在不使用插件的情况下，也可以原生的支持音频格式文件的播放，当然，支持的格式是有限的。
+        音频<audio>
+            当前<audio>元素支持三种音频格式：尽量使用mp3格式
+            浏览器           MP3             Wav   Ogg
+        Intemet Explorer    YES              NO     NO
+            Chrome          YES              YES    YES
+            Firefox         YES              YES    YES 
+            Safari          YES              YES    NO
+            Opera           YES              YES    YES
+
+    语法：
+        <audio src="文件地址" comtrols="controls"></audio>
+
+    照顾低版本浏览器
+    <audio controls="controls">
+        <source src="happy.mp3" type="audio/mpeg">
+        <source src="happy.ogg" type="audio/ogg">
+        您的浏览器暂不支持<audio>标签。
+    </audio>
+
+    常见属性
+     属性        值                     描述
+    autoplay  autoplay           音频在就绪后马上播放。
+    controls  controls           向用户显示控件，比如播放按钮。
+    loop      loop               每当音频结束时重新开始播放。
+    src       url                要播放的音频的URL
+    谷歌浏览器把音频和视频自动播放禁止了
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMl5新增音频标签</title>
+ </head>
+ <body>
+    <audio src="s1024.mp3" autoplay="autoplay" controls="controls"
+    loop="loop"></audio>
+ </body>
+ </html>

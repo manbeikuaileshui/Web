@@ -1,0 +1,31 @@
+<!-- 
+    Bootstrap需要为页面内容和栅格系统包裹一个.containe容器，Bootstarp预先定义好了这个类，叫.container.它提供了两个做此用处的类。
+        1.container类
+            ①响应式布局的容器 固定宽度
+            ②大屏(>=1200px) 宽度为1170px
+            ③中屏(>=992px) 宽度定为970px
+            ④小屏(>=768px) 宽度定为750px
+            ⑤超小屏(100%)
+        2.container-fluid类
+            ①流式布局容器 百分百宽度
+            ②占据全部视口(viewport)的容器
+            ③适合于单独做移动端开发
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.cn/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.cn/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../2.Bootstrap使用/bootstrap/css/bootstrap.min.css">
+    <title>Document</title>
+ </head>
+ <body>
+    <div class="container">123</div>
+    <div class="container-fluid">123</div>
+ </body>
+ </html>

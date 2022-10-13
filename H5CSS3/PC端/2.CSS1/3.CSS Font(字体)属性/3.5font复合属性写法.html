@@ -1,0 +1,35 @@
+<!-- 
+字体复合属性
+字体属性可以把以上文字样式综合来写，这样可以更节约代码。
+语法：标签名 {
+    font:font-style font-weight font-size/line-height font-family;
+}
+使用font属性时，必须按上面语法格式中的顺序书写，不能更换顺序，并且各个属性间以空格隔开。
+不需要设置的属性可以省略(取默认值)，但必须保留font-size和font-family属性，否则font属性将不起作用。 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS字体属性之复合属性</title>
+    <style>
+        /* 想要div文字变倾斜、加粗、字号设置为16像素并且是微软雅黑 */
+        div {
+            /* font-family: 'Microsoft Yahei';
+            font-size: 16px;
+            font-weight: 700;
+            font-style: italic; */
+            /* 复合属性：简写的方式，顺序不能颠倒 */
+            /* font: font-style font-weight font-size/line-height font-family; */
+            
+            /* font: 20px 'Microsoft Yahei'; */
+        }
+    </style>
+</head>
+<body>
+    <div>三生三世十里桃花，一心一意百行代码</div>
+</body>
+</html>

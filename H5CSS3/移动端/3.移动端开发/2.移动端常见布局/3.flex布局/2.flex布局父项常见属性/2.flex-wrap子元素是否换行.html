@@ -1,0 +1,41 @@
+<!-- 
+    flex布局中默认是不换行的，如果装不开，会缩小元素的宽度。
+    flex-wrap: 设置子元素是否换行;
+        属性值  说明
+        nowrap  默认值，不换行
+        wrap    换行
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            width: 500px;
+            height: 400px;
+            background-color: pink;
+            flex-wrap: wrap;
+        }
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: red;
+            color: #fff;
+            margin: 5px;
+        }
+    </style>
+ </head>
+ <body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+    </div>
+ </body>
+ </html>

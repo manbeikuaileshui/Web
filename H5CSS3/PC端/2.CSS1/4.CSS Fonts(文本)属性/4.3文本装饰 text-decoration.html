@@ -1,0 +1,35 @@
+<!-- 装饰文本
+text-decoration属性规定添加到文本的修饰。可以给文本添加下划线、删除线、上划线等。
+div {
+    text-decoration: underline;
+}
+属性值                  描述
+none          默认。没有装饰线(最常用)
+underline     下划线。链接a自带下划线(常用)
+overline      上划线。(几乎不用)
+line-through  删除线(不常用)
+重点记住如何添加、删除下划线 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS文本外观之装饰文本</title>
+    <style>
+        div {
+            text-decoration: underline;
+        }
+        a {
+            /* 取消a默认的下划线 */
+            text-decoration: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>粉红色的回忆</div>
+    <a href="#">粉红色的回忆</a>
+</body>
+</html>

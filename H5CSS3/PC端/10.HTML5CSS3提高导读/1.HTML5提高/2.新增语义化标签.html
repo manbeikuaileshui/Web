@@ -1,0 +1,77 @@
+<!-- 
+    以前布局，我们基本用div来做。div对于搜索引擎来说是没有语义的。
+    <header>：头部标签
+    <nav>：导航标签
+    <article>：内容标签
+    <section>：定位文档某个区域
+    <aside>：侧边栏标签
+    <footer>：尾部标签
+    注意:
+        1.这种语义化标准主要针对搜索引擎的
+        2.这些新标签页面中可以使用多次
+        3.在IE9中，需要把这些元素转换为块级元素
+        4.其实，我们移动端更喜欢使用这些标签
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5新增语义化标签</title>
+    <style>
+        header,
+        nav,
+        footer {
+            width: 500px;
+            height: 50px;
+            background-color: pink;
+            border-radius: 15px;
+            margin: 15px auto;
+        }
+        section {
+            position: absolute;
+            top: 100px;
+            left:95px;
+            width: 100px;
+            height: 30px;
+            background-color: skyblue;
+            border-radius: 5px;
+        }
+        article {
+            position: relative;
+            left: 425px;
+            top: 0;
+            float: left;
+            width: 290px;
+            height: 150px;
+            background-color: pink;
+            border-radius: 15px;
+        }
+        aside {
+            position: relative;
+            float: left;
+            left: 425px;
+            width: 190px;
+            height: 150px;
+            background-color: pink;
+            border-radius: 15px;
+            margin-left: 15px;
+        }
+        br {
+            clear: both;
+        }
+    </style>
+ </head>
+ <body>
+    <header>头部标签</header>
+    <nav>导航栏标签</nav>
+    <article>
+        内容标签
+        <section>某个区域</section>
+    </article>
+    <aside>侧边栏</aside>
+    </br>
+    <footer>尾部标签</footer>
+ </body>
+ </html>

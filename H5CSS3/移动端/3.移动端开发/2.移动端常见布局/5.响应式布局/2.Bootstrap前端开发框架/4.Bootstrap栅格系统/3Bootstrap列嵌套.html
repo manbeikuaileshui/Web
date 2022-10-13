@@ -1,0 +1,39 @@
+<!-- 
+    栅格系统内置的栅格系统将内容再次嵌套。简单理解就是一个列内再分成若干份小列。我们可以通过添加一个新的.row元素和一系列.col-sm-*元素到已经存在的.col-sm-*元素内。
+    我们列嵌套最好加一个行(row),这样可以取消父元素的padding值，而且高度自动和父级一样高
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.cn/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.cn/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../2.Bootstrap使用/bootstrap/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        .row > div {
+            height: 50px;
+            background-color: pink;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- 我们列嵌套最好加一个行(row),这样可以取消父元素的padding值，而且高度自动和父级一样高 -->
+                <div class="row">
+                    <div class="col-md-4">a</div>
+                    <div class="col-md-8">b</div>
+                </div>
+            </div>
+            <div class="col-md-4">2</div>
+            <div class="col-md-4">3</div>
+        </div>
+    </div>
+ </body>
+ </html>

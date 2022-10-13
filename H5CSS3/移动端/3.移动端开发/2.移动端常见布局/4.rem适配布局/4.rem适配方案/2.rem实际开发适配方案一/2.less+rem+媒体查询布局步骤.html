@@ -1,0 +1,31 @@
+<!-- 
+    1.技术选型
+        方案：采取单独制作移动页面方案
+        技术：采less+媒体查询+rem布局
+
+    2.搭建相关文件夹结构
+        ①项目文件夹包含全部文件
+        ②images文件夹包含常用图片
+        ③upload文件夹包含商品图片
+        ④CSS文件夹包含所有CSS文件
+        ⑤index.html首页文件
+
+    3.设置视口标签以及引入初始化样式(移动端比PC端多了一个视口标签)
+    <meta name="viewport" contrnt="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="样式文件路径"> 初始化样式文件
+
+    4.设置公共common.less文件
+        ①新建commom.less 设置好最常见的屏幕尺寸，利用媒体查询设置不同的html字体大小，因为除了首页其它页面也需要
+        ②划分的份数我们定为15份
+        ③因为我们pc端也可以打开我们苏宁移动端首页，我们默认html字体大小为50px(这句话写到最上面)
+
+    5.设置body样式
+
+    6.新建index.less文件
+        ①新建index.less  这里面写首页样式
+        ②将刚才设置好的common.less引入到index.less里面 @import "要导入的文件名";
+        注意:
+            ①@import 导入的意思，可以把一个样式文件(.less文件)导入到另一个样式文件(.less文件)里去
+            ②link 是把一个样式文件(.css文件)引入到html页面里去
+    7.为index.html页面引入index.css
+ -->

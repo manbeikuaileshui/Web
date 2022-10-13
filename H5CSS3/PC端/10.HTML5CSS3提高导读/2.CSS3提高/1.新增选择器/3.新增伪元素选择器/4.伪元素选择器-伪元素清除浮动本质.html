@@ -1,0 +1,73 @@
+<!-- 
+    .clearfix::after {
+        content: "";   伪元素必须写的属性
+        dispaly: block;  插入的元素必须是块级元素
+        height: 0;  不要看见这个元素
+        clear: both;  核心代码清除浮动
+        visibility: hidden;  不要看见这个元素
+    }
+
+    .clearfix::before,
+    .clearfix::after {
+        content: "";  伪元素必须写的属性
+        display: table;  转换为块级元素并且在一行显示
+    }
+    .clearfix::after {
+        clear: both;  核心代码清除浮动
+    }
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            border: 1px solid red;
+        }
+        .box1 {
+            float: left;
+            width: 100px;
+            height: 50px;
+            background-color: pink;
+        }
+        .box2 {
+            float: left;
+            width: 100px;
+            height: 50px;
+            background-color: green;
+        }
+        .box3 {
+            width: 300px;
+            height: 50px;
+            background-color: blue;
+        }
+        /* .box::after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+        } */
+        .box::after,
+        .box::before {
+            content: "";
+            display: table;
+        }
+        .box::after {
+            clear: both;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="box">
+        <section class="box1"></section>
+        <section class="box2"></section>
+    </div>
+    <div class="box3"></div>
+ </body>
+ </html>

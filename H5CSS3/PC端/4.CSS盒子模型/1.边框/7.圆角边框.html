@@ -1,0 +1,72 @@
+<!-- 圆角边框
+    border-radius属性用于设置元素的外边框圆角
+    语法:
+        border-radius: length;
+        1.参数值可以为像素值或百分比的形式
+        2.如果是正方形，想要设置一个圆，把数值修改为高度的一半即可，或者直接写为50%
+        3.如果是一个矩形，想要设置一个圆角矩形，直接设置为高度的一半就可以了
+        4.该属性是一个简写属性，可以跟四个值，分别代表左上角(border-top-left-radius)、右上角(border-top-right-radius)、右下角(border-bottom-right-radius)、左下角(border-bottom-left-radius)
+        5.一个参数：四个角；两个参数：对角线；三个参数：第一个参数对应第一个角，第二个参数对应第二条对角线，第三个参数对应第三个角
+
+        
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角边框</title>
+    <style>
+        .box1 {
+            width: 300px;
+            height: 150px;
+            background-color: pink;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background: pink;
+            /* border-radius: 150px; */
+            /* 50%就是宽度和高度的一半，等价于150px */
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .box3 {
+            width: 300px;
+            height: 150px;
+            background: pink;
+            border-radius: 75px;
+            margin-bottom: 10px;
+        }
+
+        .box4 {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            /* border-radius: 10px 20px 30px 40px; */
+            /* border-radius: 10px 30px; */
+            border-radius: 10px 30px 50px;
+            /* border-top-left-radius:30px; */
+            /* border-top-right-radius:30px; */
+            /* border-bottom-right-radius:30px; */
+            /* border-bottom-left-radius:30px; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">圆角边框：</div>
+    <div class="box2">圆形：</div>
+    <div class="box3">圆角矩形：</div>
+    <div class="box4">四个角不同：</div>
+</body>
+
+</html>

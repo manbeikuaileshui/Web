@@ -1,0 +1,77 @@
+<!-- 1.在HTML标签中，<img>标签用于定义HTML页面中的图像。
+<img src="图像URL" />
+单词image的缩写，意为图像。
+src是<img>标签的必须属性，它用于指定图像文件的路径和文件名。
+所谓属性：简单理解就是属于这个图像标签的特性
+注意点：1.图像标签可以拥有多个属性，必须写在标签名的后面。
+        2.属性之间不分先后顺序，标签名与属性、属性与属性之间均以空格分开。
+        3.属性采取键值对的格式，即key='value'的格式，属性='属性值'。
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>图像标签的使用：</h4>
+
+    <h4> alt 替换文本 图像显示不出来的时候用文字替换：</h4>
+    <img src="abcd1.jpg" alt="我是你爸爸"/>
+
+    <h4> title 提示文本 鼠标放到图像上，显示的文字：</h4>
+    <img src="abcd.jpg" alt="我是你爸爸" title="我是你爸爸思密达"/>
+
+    <h4> width 设置图像的宽度：</h4>
+    <img src="abcd.jpg" alt="我是你爸爸" title="我是你爸爸思密达" width="500"/>
+
+    <h4> height 设置图像的高度：</h4>
+    <img src="abcd.jpg" alt="我是你爸爸" title="我是你爸爸思密达" width="500" height=“50”/>
+
+    <h4> border 设置图像的边框粗细：</h4>
+    <img src="abcd.jpg" alt="我是你爸爸" title="我是你爸爸思密达" width="500" height="200" 
+    border="2"/>
+
+</body>
+</html>
+
+<!-- 属性         属性值                    说明
+     src         图片路径                 必须属性
+     alt         文本              替换文本。图像不能显示的文字
+     title       文本              提示文本。鼠标放到图像上，显示的文字
+     width       像素              设置图像的宽度
+     height      像素              设置图像的高度
+     border      像素              设置图像的边框粗细 -->
+
+<!-- 目录文件夹：就是普通的文件夹，里面只不过存放了我们做页面所需要的相关材料，比如html文件、图片等。
+     根目录：打开目录文件夹的第一层就是根目录
+
+     路径：页面中的图片会非常多，通常我们会新建一个文件夹来存放这些图像文件(inages)，这时再查找图像，
+     就需要采用“路径”的方式来指定图像文件的位置。
+     路径可分为：
+     1.相对路径：以引用文件所在位置为参考基础，而建立出的目录路径
+                简单来说，图片相对于HTML页面的位置
+    相对路径分为：1.同一级路径  无符号   图像文件位于HTML文件同一级  如<img src="abcd.jpg" />
+                 2.下一级路径    /     图像文件位于HTML文件下一级  如<img src="图片/www.jpg" />
+                 3.上一级路径   ../    图像文件位于HTML文件上一级  如<img src="../efg.jpg" />
+     2.绝对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径  一般不使用这个方法
+     例如："E:\前端web\efg.jpg" 或完整的网络地址  "https://hao2.qhimg.com/t0140233c1717740b15.png" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="abcd.jpg" />
+    <img src="图片/www.jpg" />
+    <img src="../efg.jpg" />
+    <img src="E:\前端web\efg.jpg" />
+    <img src="https://hao2.qhimg.com/t0140233c1717740b15.png" />
+</body>
+</html>

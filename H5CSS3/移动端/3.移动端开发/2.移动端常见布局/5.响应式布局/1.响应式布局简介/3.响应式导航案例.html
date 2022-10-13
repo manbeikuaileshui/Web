@@ -1,0 +1,56 @@
+<!-- 
+    需求分析
+        1.当我们屏幕大于等于768px，我们给布局容器container宽度为750px
+        2.container里面包含8个小li盒子，每个盒子的宽度定为93.75px(750/8),高度为30px，浮动一行显示。
+        3.当我们屏幕缩放，宽度小于768px的时候，contiainer盒子宽度修改为100%.
+        4.此时里面的8个小li，宽度修改为33.33%，这样一行就只能显示3个小li，剩余下一行显示。
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 750px;
+            height: 30px;
+            margin: 0 auto;
+        }
+        .container ul li {
+            float: left;
+            list-style: none;
+            width: 93.75px;
+            height: 30px;
+            background-color: green;
+        }
+        @media screen and (max-width: 767px) {
+            .container {
+                width: 100%;
+            }
+            .container ul li {
+                width: 33.33%;
+            }
+        }
+    </style>
+ </head>
+ <body>
+    <div class="container">
+        <ul>
+            <li>导航1</li>
+            <li>导航2</li>
+            <li>导航3</li>
+            <li>导航4</li>
+            <li>导航5</li>
+            <li>导航6</li>
+            <li>导航7</li>
+            <li>导航8</li>
+        </ul>
+    </div>
+ </body>
+ </html>

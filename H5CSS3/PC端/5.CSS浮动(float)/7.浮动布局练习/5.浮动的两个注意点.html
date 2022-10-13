@@ -1,0 +1,44 @@
+<!-- 
+    1.浮动和标准流的父盒子搭配
+        先用标准的父元素排列上下位置，之后内部子元素采取浮动排列左右位置
+    2.一个元素浮动了，理论上其余的兄弟元素也要浮动。
+        一个盒子里面有多个子盒子，如果其中一个盒子浮动了，那么其他兄弟也应该浮动，以防止引起问题。
+        浮动的盒子只会影响浮动盒子后面的标准流，不会影响前面的标准流。
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .damao {
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+        }
+        .ermao {
+            float: left;
+            width: 200px;
+            height: 150px;
+            background-color: red;
+        }
+        .sanmao {
+            width: 300px;
+            height: 240px;
+            background-color: blue;
+        }
+    </style>
+ </head>
+ <body>
+    <!-- 第一个盒子不浮动，第二个盒子浮动是怎样的情况？ -->
+    <div class="box">
+        <div class="damao">大毛</div>
+        <div class="ermao">二毛</div>
+        <div class="sanmao">三毛</div>
+    </div>
+ </body>
+ </html>

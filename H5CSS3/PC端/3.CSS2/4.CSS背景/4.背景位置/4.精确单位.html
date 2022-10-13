@@ -1,0 +1,31 @@
+<!-- 
+    2.参数是精确单位
+        ①如果参数值是精确坐标，那么第一个肯定是x坐标，第二个肯定是y坐标
+        ②如果只指定一个数值，那该数值一定是x坐标，另一个默认垂直居中
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>背景位置-精确单位</title>
+     <style>
+         div {
+             width: 300px;
+             height: 300px;
+             background-color: pink;
+             background-image: url(logo.png);
+             background-repeat: no-repeat;
+             /* 20px 50px x轴一定是20，y轴一定是50 */
+             /* background-position: 20px 50px; */
+             /* 只指定一个数值，一定是x坐标，另一个默认垂直居中 */
+             background-position: 20px;
+         }
+     </style>
+ </head>
+ <body>
+     <div></div>
+ </body>
+ </html>

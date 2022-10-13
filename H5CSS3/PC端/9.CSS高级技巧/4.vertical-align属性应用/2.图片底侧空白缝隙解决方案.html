@@ -1,0 +1,30 @@
+<!-- 
+    bug：图片底侧会有一个空白缝隙，原因是行内块元素会和文字的基线对齐。
+    解决方法：
+        1.不要基线对齐即可。(推荐)
+        2.将图片转为块级元素即可。
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片底侧空白缝隙解决方案</title>
+    <style>
+        div {
+            border: 2px solid red;
+        }
+        img {
+            vertical-align: middle;
+            /* display: block; */
+        }
+    </style>
+ </head>
+ <body>
+    <div>
+        <img src="ldh.jpg">
+    </div>
+ </body>
+ </html>

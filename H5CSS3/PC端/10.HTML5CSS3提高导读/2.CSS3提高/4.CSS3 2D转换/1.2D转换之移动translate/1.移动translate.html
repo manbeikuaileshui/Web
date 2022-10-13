@@ -1,0 +1,54 @@
+<!-- 
+    转换(transform)是CSS3中具有颠覆性的特征之一，可以实现元素的位移、旋转、缩放等效果。
+        1.移动:translate
+        2.旋转:rotate
+        3.缩放:scale
+    2D移动是2D转换里面的一种功能，可以改变元素在页面中的位置，类似定位。
+        1.语法:
+            transform: translate(x,y); 或者分开写
+            transform: translateX(n);
+            transform: translateY(n);
+        2.重点:
+            ①定义2D转换中的移动，沿着X和Y轴移动元素
+            ②translate最大的优点:不会影响到其他元素的位置
+            ③translate中的百分比单位是相对于自身元素的 translate: (50%,50%);
+            ④对行内标签没有效果
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 移动盒子的位置: 定位、盒子的外边距、2D转换移动 */
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* transform: translate(100px,100px);
+            transform: translate(100px,0);
+            transform: translate(0,100px);
+            transform: translateX(100px);
+            transform: translateY(100px);
+            transform: translate(50%,50%); */
+        }
+        div:first-of-type {
+            transform: translate(100%,100%)
+        }
+        div:last-of-type {
+            background-color: red;
+        }
+        span {
+            background-color: pink;
+            transform: translate(100px,100px);
+        }
+    </style>
+ </head>
+ <body>
+    <div></div>
+    <div></div>
+    <span>123456</span>
+ </body>
+ </html>

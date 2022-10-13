@@ -1,0 +1,33 @@
+<!-- 文本缩进
+text-indent属性用来指定文本的第一行的缩进，通常是将段落的首行缩进。
+div {
+    text-indent: 10px;
+}
+通过设置该属性，所有元素的第一行都可以缩进一个给定的长度，甚至该长度可以是负值。
+p {
+    text-indent:2em;
+}
+em是一个相对单位，就是当前元素(font-size)1个文字的大小，如果当前元素没有设置大小，则会按照父元素的1个文字大小。 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS文本外观之文本缩进</title>
+    <style>
+        p {
+            /* 文本的第一行首行缩进多少距离，20px也可以写成是负的 */
+            /* text-indent: 20px; */
+            /* 2em表示缩进当前元素2个文字大小的距离 */
+            text-indent: 2em;
+        }
+    </style>
+</head>
+<body>
+    <p>的合法的手法和地方巅峰对决是覅计算的覅就穷附件 </p>
+    <p>第三方广东省鼓风机覅噢钢结构为哦发动机凹非机动</p>
+    <p>大幅度随机发为哦房管局覅殴打进攻法国恢复那个女孩大家覅欧美风你</p>
+</body>
+</html>

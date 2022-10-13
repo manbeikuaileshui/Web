@@ -1,0 +1,36 @@
+<!-- 通配符选择器
+在CSS中，通配符选择器使用“*”定义，他表示选取页面中所有元素（标签）。
+语法：* {
+         属性1: 属性值1;
+         ......
+      }
+注意：
+1.通配符选择器不需要用调用，自动就给所有的元素使用样式。
+2.特殊情况才使用，后面讲解使用场景（以下是清除所有的元素标签的内外边距，后期讲）
+* {
+    margin: 0;
+    padding: 0;
+} -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基础选择器之通配符选择器</title>
+    <style>
+        /* * 这里把 html body div span li 等等的标签都改为红色 */
+        * {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div><我的/div>
+    <span>我的</span>
+    <ul>
+        <li>还是我的</li>
+    </ul>
+</body>
+</html>

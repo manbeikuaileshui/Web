@@ -1,0 +1,44 @@
+<!-- CSS书写顺序
+    1.布局定位属性
+    2.自身属性
+    3.文本属性
+    4.其他属性
+
+    项目文件夹:shoping
+    样式类图片文件夹:images
+    样式文件夹:css
+    产品类图片文件夹:upload
+    字体类文件夹:fonts
+    脚本文件夹:js
+
+    首页:index.html
+    CSS初始化样式文件:base.css
+    CSS公共样式文件:common.css
+
+    有些网站初始化的不太提倡
+    * {
+        margin: 0;
+        passing: 0;
+    }
+    比如:新浪
+        html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img {
+            margin: 0;
+            padding: 0;
+        }
+
+    模块化开发
+        所谓的模块化:将一个项目按照功能划分，一个功能一个模块，互不影响
+        代码也如此，有些样式和结构在很多页面都会出现，比如页面头部和底部，大部分页面都有。此时，可以把这些结构和样式单独作为一个模块，然后重复使用。
+        这里最典型的引用就是common.css公共样式。写好一个样式，其余的页面用到这些相同的样式
+        模块化开发具有重复使用、更换方便等优点
+        commo.css公共样式里面包含版心宽度、清除浮动、页面文字颜色等公共样式。
+
+    项目制作流程
+    1.TDk三大标签
+        ①<title>网站标题</title>
+        ②description网站说明  <meta name="description" content="网站说明"/>
+        ③keywords关键字  <meat name="keywords" content="关键字"/>
+    2.引入网站图标
+    3.引入初始化样式文件  <link rel="stylesheet" href="">
+    4.引入公共的样式文件  <link rel="stylesheet" href="">
+-->

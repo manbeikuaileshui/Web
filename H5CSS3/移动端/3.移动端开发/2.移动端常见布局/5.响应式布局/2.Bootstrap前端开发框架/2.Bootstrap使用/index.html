@@ -1,0 +1,52 @@
+<!-- 
+    Boorstrap使用四步曲：
+        1.创建文件夹结构
+            ①bootstrap文件夹(里面放下载的文件)
+            ②css文件夹(自己的css文件)
+            ③images文件夹
+            ④index.html文件
+        2.创建html骨架结构
+           在meta标签后面插入
+            <!--[if lt IE 9]>
+                注释:解决IE9以下浏览器对html5新增标签的不识别，并导致CSS不起作用的问题
+                <script src="https://cdn.jsdelivr.cn/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+                注释:解决IE9以下浏览器对CSS3Media Query的不识别
+                <script src="https://cdn.jsdelivr.cn/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+            <![endif]-->
+<!--    3.引入相关样式文件
+            <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">或
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        4.书写内容
+            ①直接拿Bootstrap预选定义好的样式来使用
+            ②修改Bootstrap原来样式，注意权重问题
+            ③学好Bootstrap的关键在于知道它定义了哪些样式，以及这些样式能实现什么效果。
+ --> 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.cn/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.cn/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        .login {
+            display: block;
+            width: 90px;
+            height: 45px;
+            line-height: 25px;
+            margin: 10px;
+
+        }
+    </style>
+ </head>
+ <body>
+    <button type="button" class="btn btn-success login">登录</button>
+    <div class="btn btn-success">成功</div>
+    <button type="button" class="btn btn-danger">失败</button>
+ </body>
+ </html>

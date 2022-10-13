@@ -1,0 +1,46 @@
+<!-- 
+    align-items: 设置侧轴上的子元素排列方式(单行)
+    该属性是控制子项在侧轴(默认是y轴)上的排列方式，在子项为单项的时候使用
+      属性值      说明
+    flex-start  从上到下
+    flex-end    从下到上
+    center      挤在一起居中(垂直居中)
+    stretch     拉伸(默认值,子盒子不要给高度)
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            width: 500px;
+            height: 400px;
+            background-color: pink;
+            /* 默认的主轴是x轴 row */
+            flex-direction: row;
+            /* 设置主轴水平居中 */
+            justify-content: center;
+            /* 设置侧轴垂直居中 */
+            align-items: center;
+        }
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: red;
+            color: #fff;
+            margin: 5px;
+        }
+    </style>
+ </head>
+ <body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+ </body>
+ </html>

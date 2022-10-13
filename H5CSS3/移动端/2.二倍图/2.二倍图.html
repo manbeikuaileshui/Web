@@ -1,0 +1,41 @@
+<!-- 
+    1.PC端和早前的手机屏幕/普通手机屏幕: 1CSS像素 = 1物理像素的。
+    2.Retina(视网膜屏幕)是一种显示技术，可以将把更多的物理像素点压缩至一块屏幕里，从而达到更高的分辨率，并提高屏幕显示的细腻程度。
+
+    多倍图
+      1.对于一张50px*50px的图片，在手机Retina屏中打开，按照刚才的物理像素比会放大倍数，这样会造成图片模糊
+      2.在标准的viewport设置中，使用倍图来提高图片质量，解决在高清设备中的模糊问题
+      3.通常使用二倍图，因为iPhone6\7\8的影响，但是现在还存在3倍4倍图的情况，这个看实际开发公司需求
+      4.背景图片注意缩放问题
+   二倍图例子：
+      需要一个50px*50px(css像素)的图片，直接放到我们的iPhone8里面会放大2倍，就会模糊
+      解决方法：
+         放一个100px*100px图片，然后手动缩小为50px*50px(css像素)
+         我们准备的图片比我们实际需要的大小大2倍，这种方式就是2倍图
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        我们需要一个129px*156px(css像素)的图片，直接放到我们的iPhone12pro里面会放大3倍，就会模糊
+        我们采取的是放一个比图片大3倍的盒子，然后手动缩小为129px*156px(css像素)
+        我们准备的图片比我们实际需要的大小大3倍，这种方式就是3倍图
+         */
+         img:nth-child(2) {
+            width: 129px;
+            height: 156px;
+         }
+    </style>
+ </head>
+ <body>
+    <!-- 模糊的 -->
+    <img src="logo1.png" alt="">
+    <!-- 我们采取3倍图 -->
+    <img src="logo2.png" alt="">
+ </body>
+ </html>

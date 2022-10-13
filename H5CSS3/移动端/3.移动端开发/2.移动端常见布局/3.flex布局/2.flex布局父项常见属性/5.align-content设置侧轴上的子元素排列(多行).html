@@ -1,0 +1,53 @@
+<!-- 
+    设置子项在侧轴上的排列方式并且只能用于子项出现换行的情况(多行),在单行下是没有效果的。
+    align-content: 设置侧轴上的子元素的排列方式(多行);
+       属性值                说明
+    flex-start     默认值，在侧轴的头部开始排列
+    flex-end       在侧轴的尾部开始排列
+    center         在侧轴中间显示
+    space-around   子项在侧轴平分剩余空间
+    space-between  子项在侧轴先分布在两头，再平分剩余空间
+    stretch        设置子项元素高度平分父元素高度,子元素没设置高度才有效
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            width: 500px;
+            height: 400px;
+            background-color: pink;
+            flex-wrap: wrap;
+            /* 默认的主轴是x轴 row */
+            flex-direction: row;
+            /* 设置主轴水平居中 */
+            justify-content: center;
+            /* 设置侧轴垂直居中 有换行*/
+            align-content: center;
+        }
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: red;
+            color: #fff;
+            margin: 5px;
+        }
+    </style>
+ </head>
+ <body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+
+    </div>
+ </body>
+ </html>

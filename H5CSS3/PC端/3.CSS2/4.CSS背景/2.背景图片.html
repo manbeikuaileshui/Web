@@ -1,0 +1,30 @@
+<!-- 
+    background-image属性描述了元素的背景图像。实际开发常见于logo或者一些装饰的
+      小图片或者是超大的背景图片，优点是非常便于控制位置(精灵图也是一种运用场景)
+    语法：
+        background-image: none | url(图片地址)
+        none:无背景图片(默认)
+        url:使用绝对路径或相对地址指定背景图片
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>背景图片</title>
+     <style>
+         div {
+             width: 700px;
+             height: 700px;
+             /* 不要落下 url() */
+             background-image: url(王者荣耀.png);
+         }
+     </style>
+ </head>
+ <body>
+     <div></div>
+ </body>
+ </html>

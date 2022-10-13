@@ -1,0 +1,27 @@
+<!-- 
+    语法：
+        1.transform: translateX(100px);  在X轴上移动。
+        2.transform: translateY(100px);  在Y轴上移动。
+        3.transform: translateZ(100px);  在Z轴上移动(一般用px为单位)。
+        4.transform: translate3d(x,y,z);  x,y,z分别指要移动的轴的方向的距离。
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transform: translate3d(100px,100px,100px);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

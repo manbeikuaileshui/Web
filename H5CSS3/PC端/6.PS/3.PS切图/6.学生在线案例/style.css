@@ -1,0 +1,624 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #f3f5f7;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* 清除浮动 */
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both
+}
+.clearfix {
+    *zoom:1;
+}
+
+.w {
+    width: 1200px;
+    margin: auto;
+}
+
+/* 第一行 */
+.header {
+    height: 42px;
+    margin: 30px auto;
+}
+.logo {
+    float: left;
+    width: 198px;
+    height: 42px;
+}
+.nav {
+    float: left;
+    margin-left: 60px;
+}
+.nav ul li {
+    float: left;
+    margin: 0 15px;
+}
+.nav ul li a {
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+    font-family: "微软雅黑";
+}
+.nav ul li a:hover {
+    border-bottom: 2px solid #00a4ff;
+    color: #00a4ff;
+}
+.search {
+    float: left;
+    width: 412px;
+    height: 42px;
+    margin-left: 70px;
+}
+.search input {
+    float: left;
+    width: 346px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    border-right: none;
+    color: #bfbfbf;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    padding-left: 15px;
+}
+.search button {
+    float: left;
+    width: 50px;
+    height: 42px;
+    /* 去掉button的默认边框 */
+    border: none;
+    background-image: url(images/search.png);
+}
+.user {
+    float: left;
+    line-height: 42px;
+    margin-left: 40px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #666666;
+}
+.user img {
+    vertical-align: middle;
+}
+
+/* 第二行 */
+.banner {
+    height: 421px;
+    background-color: #1c036c;
+}
+.banner .w {
+    height: 421px;
+    background: url(images/banner.png) no-repeat top center;
+}
+.subnav {
+    float: left;
+    width: 190px;
+    height: 421px;
+    background: rgba(0, 0, 0, .3);
+}
+.subnav ul li a {
+    font-size: 14px;
+    color: #ffffff;
+    font-family: "微软雅黑";
+}
+.subnav ul li {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+}
+.subnav ul li a span {
+    float: right;
+}
+.subnav ul li a:hover {
+    color: #00b4ff;
+}
+.course {
+    float: right;
+    width: 230px;
+    height: 300px;
+    background-color: #ffffff;
+    /* 浮动的盒子不会有外边距合并的问题 */
+    margin-top: 50px;
+}
+.course h2 {
+    height: 48px;
+    background-color: #9bceea;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+    color: #ffffff;
+}
+.course .bd {
+    padding: 0 20px;
+}
+.course ul li h4 {
+    font-size: 16px;
+    color: #4e4e4e;
+}
+.course ul li p {
+    font-size: 12px;
+    color: #a5a5a5;
+}
+.course ul li {
+    padding: 14px 0;
+    border-bottom: 1px solid #efefef;
+}
+.course .bd .more {
+    display: block;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    margin-top: 5px;
+    text-align: center;
+    line-height: 38px;
+    color: #00a4ff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* 第三行 */
+.goods {
+    height: 60px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    box-shadow: 0 2px 3px 3px rgba(0,0,0,.1);
+    /* 行高会继承 */
+    line-height: 60px;
+}
+.goods h3 {
+    float: left;
+    margin-left: 30px;
+    font-size: 16px;
+    color: #00a4ff;
+}
+.goods ul {
+    float: left;
+    margin-left: 30px;
+}
+.goods ul li {
+    float: left;
+}
+.goods .goods-item ul li a {
+    padding: 0 35px;
+    font-size: 16px;
+    color: #050505;
+    border-left: 1px solid #cccccc;
+}
+.goods .goods-item ul li a:hover {
+    color:#00a4ff;
+}
+.goods .mod {
+    float: right;
+    padding-right: 30px;
+    font-size: 14px;
+    color: #00a4ff;
+}
+
+/* 第四行 */
+.box {
+    margin-top: 30px;
+}
+.box .box-hd {
+    height: 45px;
+}
+.box .box-hd h3 {
+    float: left;
+    font-size: 20px;
+    color: #494949;
+}
+.box .box-hd a {
+    float: right;
+    font-size: 12px;
+    margin: 10px 30px 0 0;
+    color: #a5a5a5;
+}
+/* 把li的父亲ul修改的足够宽一行能装5个盒子就不会换行了 */
+.box .box-bd ul {
+    width: 1215px;
+}
+.box .box-bd ul li {
+    position: relative;
+    float: left;
+    width: 228px;
+    height: 270px;
+    background-color: #ffffff;
+    margin: 0 15px 15px 0;
+}
+.box .box-bd ul li>img {
+    width: 100%;
+}
+.box .box-bd ul li h4 {
+    font-size: 14px;
+    color: #050505;
+    margin: 25px 20px 20px 25px;
+    font-weight: 400;
+}
+.box .box-bd ul li em {
+    position: absolute;
+    top: 4px;
+    right: -4px;
+}
+.box .box-bd ul li .info {
+    font-size: 12px;
+    color: #999999;
+    margin-left: 25px;
+}
+.box .box-bd ul li .info span {
+    color: #ff7c2d;
+}
+
+/* 第五行 */
+.boxb {
+    margin-top: 20px;
+}
+.boxb .bcrm h3 {
+    float: left;
+    font-size: 20px;
+    color: #494949;
+    margin-right: 285px;
+}
+.boxb .bcrm ul li {
+    float: left;
+    margin-left: 70px;
+}
+.boxb .bcrm ul li a {
+    font-size: 16px;
+    color: #868686;
+}
+.boxb .bcrm ul li a:hover {
+    color: #00a4ff;
+}
+.boxb .bcrm .ckqb {
+    font-size: 12px;
+    color: #868686;
+    margin-left: 355px;
+}
+.boxb .bcrm .ckqb:hover {
+    color: #00a4ff;
+}
+
+.boxb .php {
+    height: 392px;
+    margin-top: 20px;
+}
+.boxb .php .phprm {
+    float: left;
+    width: 228px;
+    height: 392px;
+    margin-bottom: 15px;
+    background-image: url(images/php.png);
+}
+.boxb .php .phprm .bt1 {
+    margin: 45px 0 50px 35px;
+}
+.boxb .php .phprm .bt1 h3 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.boxb .php .phprm .bt2 h5 {
+    font-size: 14px;
+    color: #ffffff;
+    margin:0 0 55px 35px;
+}
+.boxb .php .kl {
+    float: left;
+    width: 957px;
+    margin-left: 15px;
+}
+.boxb .php .kl .sige ul {
+    width: 972px;
+}
+.boxb .php .kl .sige ul li {
+    float: left;
+    width: 228px;
+    height: 277px;
+    margin: 12px 15px 15px 0; 
+    background-color: #ffffff;
+}
+.boxb .php .kl .sige ul li img {
+    width: 100%;
+
+}
+.boxb .php .kl .sige ul li .dg h4 {
+    font-size: 14px;
+    color: #050505;
+    margin: 25px 20px 20px 25px;
+    font-weight: 400;
+}
+.boxb .php .kl .sige ul li .dg {
+    float: left;
+    width: 228px;
+    height: 83px;
+}
+.boxb .php .kl .sige ul li .gj {
+    font-size: 12px;
+    color: #999999;
+    margin-left: 25px;
+}
+.boxb .php .kl .sige ul li .gj span {
+    color: #ff7c2d;
+}
+
+/* 第六行 */
+.sj {
+    height: 433px;
+    margin-bottom: 40px;
+}
+.sj .fx {
+    margin: 40px 0 20px 0;
+}
+.sj .fx h3 {
+    float: left;
+    font-size: 20px;
+    margin-right: 330px;
+    color: #494949;
+}
+.sj .fx ul li{
+    float: left;
+    margin-right: 70px;
+}
+.sj .fx ul li a {
+    font-size: 16px;
+    color: #868686;
+}
+.sj .fx ul li a:hover {
+    color: #00a4ff;
+}
+.sj .fx .ckqb {
+    font-size: 12px;
+    color: #a5a5a5;
+    margin-left: 280px;
+}
+.sj .fx .ckqb:hover {
+    color: #00a4ff;
+}
+.sj .pm {
+    float: left;
+    width: 228px;
+    height: 392px;
+    background-image: url(images/pm.png);
+}
+.sj .pm .tou {
+    padding: 45px 0 20px 35px;
+}
+.sj .pm .tou h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #ffffff;
+}
+.sj .pm .wei h5 {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 15px 0 55px 35px;
+}
+.sj .toptu {
+    float: left;
+    width: 957px;
+    height: 100px;
+    margin-left: 15px;
+    background-image: url(images/pn.png);
+}
+.sj .toptu h2 {
+    float: left;
+    font-size: 24px;
+    color: #ea8c11;
+    padding: 40px 20px 0 60px;
+}
+.sj .toptu h4 {
+    float: left;
+    font-size: 18px;
+    color: #4a7ace;
+    margin-top: 47px;
+}
+.sj .gz ul li {
+    float: left;
+    width: 228px;
+    height: 277px;
+    margin: 15px 0 0 15px;
+    background-color: #ffffff;
+}
+.sj .gz ul li h4 {
+    width: 183px;
+    height: 38px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #050505;
+    margin: 25px 20px 20px 25px;
+}
+.sj .gz ul li .cj {
+    font-size: 12px;
+    color: #999999;
+    margin-left: 25px;
+}
+.sj .gz ul li span {
+    color: #ff7c2d;
+}
+
+/* 第七行 */
+.jq .sm h3 {
+    float: left;
+    font-size: 20px;
+    color: #494949;
+    margin-right: 290px;
+}
+.jq .sm ul li {
+    float: left;
+    margin-right: 70px;
+}
+.jq .sm ul li a {
+    font-size: 16px;
+    color: #868686;
+}
+.jq .sm ul li a:hover {
+    color: #00a4ff;
+}
+.jq .sm .ca {
+    font-size: 12px;
+    color: #868686;
+    margin-left: 285px;
+}
+.jq .sm .ca:hover {
+    color: #00a4ff;
+}
+.jq .sm {
+    margin-bottom: 20px;
+}
+.jq .xm ul {
+    width: 1215px;
+}
+.jq .xm ul li {
+    float: left;
+    width: 228px;
+    height: 270px;
+    margin: 0 15px 40px 0;
+    background-color: #ffffff;
+}
+.jq .xm ul li h4 {
+    width: 183px;
+    height: 38px;
+    font-size: 14px;
+    color: #050505;
+    margin: 25px 20px 20px 25px;
+    font-weight: 400;
+}
+.jq .xm ul li p {
+    font-size: 12px;
+    margin-left: 25px;
+    color: #999999;
+}
+.jq .xm ul li span {
+    color: #ff7c2d;
+}
+.jq .xm ul li img {
+    width: 100%;
+}
+
+/* 第八行 */
+.qdk .qdkf h3 {
+    float: left;
+    font-size: 20px;
+    color: #494949;
+    margin-right: 290px;
+}
+.qdk .qdkf ul li {
+    float: left;
+    margin-right: 70px;
+}
+.qdk .qdkf ul li a {
+    font-size: 16px;
+    color: #868686;
+}
+.qdk .qdkf ul li a:hover {
+    color: #00a4ff;
+}
+.qdk .qdkf .hh {
+    font-size: 12px;
+    color: #494949;
+    margin-left: 280px;
+}
+.qdk .qdkf .hh:hover {
+    color: #00a4ff;
+}
+.qdk .wb {
+    margin-top: 15px;
+}
+.qdk .wb ul {
+    width: 1215px;
+}
+.qdk .wb ul li {
+    float: left;
+    width: 228px;
+    height: 270px;
+    margin: 5px 15px 0 0;
+    background-color: #ffffff;
+}
+.qdk .wb ul li h4 {
+    width: 183px;
+    height: 38px;
+    font-size: 14px;
+    color: #050505;
+    margin: 25px 20px 20px 25px;
+    font-weight: 400;
+}
+.qdk .wb ul li p {
+    font-size: 12px;
+    color: #999999;
+    margin-left: 25px;
+}
+.qdk .wb ul li span {
+    color: #ff7c2d;
+}
+.qdk .wb ul li img {
+    width: 100%;
+}
+
+/* 最后一行 */
+.footer { 
+    height: 415px;
+    margin-top: 40px;
+    background-color: #ffffff;
+}
+.footer .w {
+    padding-top: 35px;
+}
+.footer .w .copyleft {
+    float: left;
+    margin-left: 20px;
+}
+.footer .w .copyleft p {
+    font-size: 12px;
+    margin: 20px 0;
+    color: #666666;
+    font-family: "宋体";
+}
+.footer .w .copyleft .app {
+    display: block;
+    width: 118px;
+    height: 33px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 33px;
+    color: #00a4ff;
+    border: 1px solid #00a4ff;
+}
+.footer .w .copyright {
+    float: right;
+}
+.footer .w .copyright dl dt {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 5px;
+}
+.footer .w .copyright dl dd a {
+    font-size: 12px;
+    color: #333333;
+    font-family: "宋体";
+}
+.footer .w .copyright dl dd a:hover {
+    color: #00a4ff;
+}
+.footer .w .copyright dl {
+    float: left;
+}
+.footer .w .copyright .right {
+    margin-right: 30px;
+}
+.footer .w .copyright .center {
+    margin: 0 120px 0 150px;
+}
+

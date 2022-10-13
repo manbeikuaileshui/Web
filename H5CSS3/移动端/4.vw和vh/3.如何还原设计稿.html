@@ -1,0 +1,32 @@
+
+<!-- 
+    前提:我们设计稿按照iphone678来设计，有个盒子是50px*50px的，如何使用vw呢？
+    分析:
+        ①设计稿参照iphone678，所以视口宽度尺寸是375px(像素大厨切换到2x模式)
+        ②那么1vw是多少px？
+            1vw = 375px / 100 = 3.75px
+        ③我们元素的目标时多少px？
+            50px*50px
+        ④那么50px*50px是多少个vw？
+            50 / 3.75 = 13.3333vw
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 13.33vw;
+            height: 13.33vw;
+            background-color: pink;
+            font-size: 5.33vw;
+        }
+    </style>
+ </head>
+ <body>
+    <div>pink</div>
+ </body>
+ </html>

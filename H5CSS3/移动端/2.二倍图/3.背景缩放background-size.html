@@ -1,0 +1,32 @@
+<!-- 
+    background-size: 背景图片宽度 背景图片高度 | cover | contain;
+        1.只写一个参数表示宽度，高度会自动等比缩放。
+        2.里面的单位是像素也可以跟百分比，百分比是相对于父盒子而言。
+        3.cover把背景图像等比缩放至足够大，以使背景图像完全覆盖背景区域，但有可能部分背景图像显示不全。
+        4.contain把图像等比缩放至最大尺寸，以使其宽度和高度完全适应内容区域,即高宽等比例拉伸，当宽或高最大时就不再拉伸，有可能有部分空白区域。
+
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            border: 2px solid red;
+            background: url(../../PC端/10.HTML5CSS3提高导读/2.CSS3提高/dog.jpg) no-repeat;
+            /* background-size: 500px; */
+            /* background-size: 50%; */
+            /* background-size: cover; */
+            background-size: contain;
+        }
+    </style>
+ </head>
+ <body>
+    <div></div>
+ </body>
+ </html>

@@ -1,0 +1,51 @@
+<!-- 
+    rem实际开发适配方案一 
+        rem+媒体查询+less技术
+    动态设置html标签font-size大小
+        1.假设设计稿是750px
+        2.假设我们把整个屏幕划分为15等份(划分标准不唯一)
+        3.每一份作为html字体大小，这里就是50px
+        4.那么在320px设备的时候，字体大小为320/15就是21.33px
+        5.用我们页面元素的大小除以不同的html字体大小会发现它们比例还是相同的
+        6.比如我们以750为标准设计稿
+        7.一个100*100像素的页面元素在750屏幕下，就是100/50，转换为rem，就是2rem*2rem，比例是1比1
+        8.320屏幕下，html字体大小为21.33，则2rem=42.66px，此时宽和高都是42.66，但是宽和高的比例还是1比1
+        9.但是已经能实现不同屏幕下页面元素盒子等比例缩放的效果
+    元素大小的取值方法
+        1.最后的公式: 页面元素的rem值 = 页面元素值(px) / (屏幕宽度 / 划分的份数)
+        2.屏幕宽度 / 划分的份数 就是html font-size的大小
+        3.或者: 页面元素的rem值 = 页面元素值(px) / html font-size字体大小
+    总结：
+        1.首先选一套标准尺寸 750
+        2.用标准尺寸750 除以 划分的份数15 得到html里面的文字大小50px
+        3.页面元素的rem值2rem = 页面元素在标准尺寸下的px值100px / html里面的文字大小50px
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (min-width: 320px) {
+            html {
+                font-size: 21.33px;
+            }
+        }
+        @media screen and (min-width: 750px) {
+            html {
+                font-size: 50px;
+            }
+        }
+        div {
+            width: 2rem;
+            height: 2rem;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

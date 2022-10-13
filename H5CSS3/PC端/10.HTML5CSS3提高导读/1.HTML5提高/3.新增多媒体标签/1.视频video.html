@@ -1,0 +1,56 @@
+<!-- 
+    HTML5在不使用插件的情况下，也可以原生的支持视频格式文件的播放，当然，支持的格式是有限的。
+        视频<viseo>
+            当前<video>元素支持三种视频格式：尽量使用mp4格式
+            浏览器          MP4             WebM   Ogg
+        Intemet Explorer    YES              NO    NO
+            Chrome          YES              YES   YES
+                            YES              YES   YES
+            Firefox   从Firefox21版本开始     
+                    Linux系统从Firefox30开始    
+            Safari           YES             NO    NO
+            Opera            YES             YES   YES
+                       从Opera25版本开始
+
+    语法：
+        <video src="文件地址" controls="controls"></video>
+
+    照顾低版本浏览器
+    <video controls="controls">
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        您的浏览器暂不支持<video>标签。
+    </video>
+
+    常见属性
+    属性         值                        描述
+    autoplay  autoplay           视频就绪自动播放(谷歌浏览器需要添加muted来解决自动播放问题)
+    controls  controls           向用户显示播放控件
+    width     pixels(像素)       设置播放器的宽度
+    height    pixels(像素)       设置播放器的高度
+    loop      loop               播放完是否继续播放该视频，循环播放
+    preload   auto(预先加载视频)  规定是否预加载视频(如果有了autoplay就忽略该属性)
+              none(不应加载视频)   
+    src       url                视屏url地址
+    poster    lmgurl             加载等待的画面图片
+    muted     muted              静音播放
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5新增视频标签</title>
+    <style>
+        video {
+            width: 100%;
+        }
+    </style>
+ </head>
+ <body>
+    <video src="leijun.mp4" autoplay="autoplay" muted="muted"
+    controls="controls" loop="loop" poster="sg.jpg"></video>
+ </body>
+ </html>

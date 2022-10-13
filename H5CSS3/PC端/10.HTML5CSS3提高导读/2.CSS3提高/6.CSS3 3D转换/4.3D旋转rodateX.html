@@ -1,0 +1,38 @@
+<!-- 
+    3D旋转值可以让元素在三位平面内沿着X轴，Y轴，Z轴或者自定义轴进行旋转。
+    语法：
+        1.transform: rotateX(45deg); 沿着X轴正向旋转45度。
+        2.transform: rotateY(45deg); 沿着Y轴正向旋转45度。
+        3.transform: rotateZ(45deg); 沿着Z轴正向旋转45度。
+        4.transform: rotate3d(x,y,z,deg); 沿着自定义轴旋转deg为角度。
+            x,y,z是表示旋转轴的矢量，是表示你是否希望沿着该轴旋转，最后一个表示旋转的角度。
+            例: transform: rotate3d(1,0,0,45deg); 沿X轴正向旋转45度。
+                transform: rotate3d(1,1,0,45deg); 沿X轴与Y轴的矢量和的轴正向旋转45度。
+    左手准则:
+        左手的拇指指向某轴的正方向；其余手指弯曲的方向就是该元素沿着某轴旋转的正方向。
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 200px;
+        }
+        img {
+            display: block;
+            margin: 200px auto;
+            transition: all 3s;
+        }
+        img:hover {
+            transform: rotateX(-45deg);
+        }
+    </style>
+ </head>
+ <body>
+    <img src="../pig.jpg" alt="">
+ </body>
+ </html>

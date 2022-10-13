@@ -1,0 +1,41 @@
+<!-- 
+    内边距(padding)属性用于设置内边距，即边框与内容之间的距离。
+    左内边距:padding-left
+    右内边距:padding-right
+    上内边距:padding-top
+    下内边距:padding-bottom
+
+    内边距(padding)属性(简写属性)可以有一到四个值。
+      值的个数                           表达意思
+    padding:5px;                 1个值，上下左右都是5像素
+    padding:5px 10px;            2个值，上下是5像素，左右是10像素
+    padding:5px 10px 20px;       3个值，上是5像素，左右是10像素，下是20像素
+    padding:5px 10px 20px 30px;  4个值，上是5像素，右是10像素，下是20像素，左是30像素，顺时针
+
+    注意:padding会影响盒子的实际大小。
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>盒子模型之内边距</title>
+     <style>
+         div {
+             width: 160px;
+             height: 160px;
+             background-color: pink;
+             /* padding-top: 20px;
+             padding-bottom: 20px;
+             padding-left: 20px;
+             padding-right: 20px; */
+             padding: 20px;
+         }
+     </style>
+ </head>
+ <body>
+     <div>盒子内容是content盒子内容是content盒子内容是centent盒子内容是centent</div>
+ </body>
+ </html>

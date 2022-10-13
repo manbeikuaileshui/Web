@@ -1,0 +1,30 @@
+<!-- 
+    3.混合单位
+        ①如果指定的两个值是精确单位和方位名词混合使用，则第一个值是x坐标，第二个值是y坐标
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>背景位置-混合单位</title>
+     <style>
+         div {
+             width: 300px;
+             height: 300px;
+             background-color: pink;
+             background-image: url(logo.png);
+             background-repeat: no-repeat;
+             /* 20px center x是20，y是center */
+             /* background-position: 20px center; */
+             /* 水平是居中对齐，垂直是20px */
+             background-position: center 20px;
+         }
+     </style>
+ </head>
+ <body>
+     <div></div>
+ </body>
+ </html>

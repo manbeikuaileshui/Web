@@ -1,0 +1,62 @@
+<!-- 
+    1.子元素的样式直接写到父元素里面就好了
+    例：
+        常规写法
+            .nav .logo {
+                color: red;
+            }
+        less嵌套写法
+            .nav {
+                .logo {
+                    color: red;
+                }
+            }
+    2.如果遇见(交集、伪类、伪元素选择器)
+        1.内层选择器的前面没有&符号，则它被解析为父选择器的后代。
+        2.如果有&符号，它就被解析为父元素自身或父元素的伪类。
+        例：
+        伪类：
+            常规写法
+                .nav a:hover {
+                    color: red;
+                }
+            less嵌套写法
+                .nav {
+                    a {
+                        &:hover {
+                            color: red;
+                        }
+                    }
+                }
+        伪元素：
+            常规写法
+                .nav::before {
+                    width: 100px;
+                    height: 100px;
+                }
+            less嵌套写法
+                .nav {
+                    &::before {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }                
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="5.nest.css">
+</head>
+<body>
+    <div class="header">
+        <a href="#">文字</a>
+    </div>
+    <div class="nav">
+        <div class="logo">传智播客</div>
+    </div>
+</body>
+</html>

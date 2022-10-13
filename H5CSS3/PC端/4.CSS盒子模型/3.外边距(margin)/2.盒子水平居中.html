@@ -1,0 +1,52 @@
+<!-- 外边距的典型应用
+    外边距可以让块级盒子水平居中，但是必须满足两个条件:
+        1.盒子必须指定了宽度(width)
+        2.盒子左右的外边距都设置为auto
+    常见的三种写法:
+        1.margin-left: auto;  margin-right: auto;
+        2.margin: auto;
+        3.margin: 0 auto;
+    注意:以上方法是让块级元素水平居中，行内元素或者行内块元素水平居中给其父元素添加text-align:center即可。
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块级盒子水平居中对齐</title>
+    <style>
+        .header {
+            width: 900px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+        .one1 {
+            width: 900px;
+            height: 200px;
+            background-color: red;
+            /* 行内元素或者行内块元素水平居中给其父元素添加text-align:center即可 */
+            text-align: center;
+        }
+        .one2 {
+            width: 900px;
+            height: 200px;
+            background-color: pink;
+            /* 行内元素或者行内块元素水平居中给其父元素添加text-align:center即可 */
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="one1">
+        <span>行内元素水平居中</span>
+    </div>
+    <div class="one2">
+        <img src="../../1.HTML/3.标签下/3.1表格/down.jpg" width="30">
+    </div>
+</body>
+</html>

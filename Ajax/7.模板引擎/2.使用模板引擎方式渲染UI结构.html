@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <!-- 1.导入模板引擎，在window全局，多一个函数，叫做template('模板的Id', 需要渲染的数据对象) -->
+    <script src="../jquery.js"></script>
+    <script src="../template-web.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+    <!-- 3.定义模板 -->
+    <!-- 3.1模板的HTML结构，必须定义到script中 -->
+    <script type="text/html" id="tpl-user">
+        <div id="title"></div>
+        <div>姓名：{{name}}</div>
+        <div>年龄：{{age}}</div>
+        <div>会员：{{isVIP}}</div>
+        <div>注册时间：{{regTime | dateFormat}}</div>
+        <div>爱好：
+            <ul>
+                {{each hobby}}
+                    <li>{{$value}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </script>
+
+    <script>
+        // 给时间补充零的函数
+        function padZero(n) {
+            if (n < 10) {
+                return '0' + n;
+            } else {
+                return n;
+            }
+        }
+        // 格式化时间的过滤器
+        template.defaults.imports.dateFormat = function(date) {
+            var y = date.getFullYear();
+            var m = padZero(date.getMonth() + 1);
+            var d = padZero(date.getDate());
+            var hh = padZero(date.getHours());
+            var mm = padZero(date.getMinutes());
+            var ss = padZero(date.getSeconds());
+            return y + '-' + m + '-' + d + ' ' + hh + ':' + mm + ":" + ss;
+        }
+        // 2.定义需要渲染的数据
+        var data = {
+            title: '<h3>用户信息</h3>',
+            name: 'zs',
+            age: 20,
+            isVIP: true,
+            regTime: new Date(),
+            hobby: ['吃饭', '睡觉', '打豆豆']
+        }
+        // 4.调用template函数
+        var htmlStr = template('tpl-user', data);
+        // 5.渲染HTML结构
+        $('#container').html(htmlStr);
+    </script>
+</body>
+</html>

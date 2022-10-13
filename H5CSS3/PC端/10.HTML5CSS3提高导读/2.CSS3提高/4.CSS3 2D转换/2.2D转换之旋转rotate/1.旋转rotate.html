@@ -1,0 +1,32 @@
+<!-- 
+    2D旋转指的是让元素在二维平面内顺时针旋转或者逆时针旋转。
+        1.语法: 
+            transform: rotate(度数);
+        2.重点
+            ①rotate里面跟度数，单位是deg。比如: rotate(45deg)
+            ②角度为正时，顺时针；为负时，逆时针。
+            ③默认旋转的中心点是元素的中心点。
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 400px;
+            border-radius: 50%;
+            border: 5px solid pink;
+            transition: all 1s;
+        }
+        img:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+ </head>
+ <body>
+    <img src="../../../1.HTML5提高/3.新增多媒体标签/sg.jpg" alt="">
+ </body>
+ </html>

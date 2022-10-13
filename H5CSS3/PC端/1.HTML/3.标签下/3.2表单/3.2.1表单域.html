@@ -1,0 +1,28 @@
+<!-- 
+ 在HTML中，一个完整的表单通常由表单域、表单控件（也称为表单元素）和提示信息3个部
+分构成。
+表单域：就是一个包含表单元素的区域
+       在HTML标签中，<form>标签用于定义表单域，以实现用户信息的收集和传递。
+       <form>会把他范围内的表单元素信息提交给服务器。
+<form action="url地址" method="提交方式" name="表单域名称">
+    各种表单元素控件
+</form>
+属性     属性值                       作用
+action  url地址    用于指定接收并处理表单数据的服务器程序的url地址
+method  get/post   用于设置表单数据的提交方式，其取值为get或post
+name    名称       用于指定表单的名称，以区分同一个页面中的多个表单域
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="demo.php" method="POST" name="name1">
+
+    </form>
+</body>
+</html>

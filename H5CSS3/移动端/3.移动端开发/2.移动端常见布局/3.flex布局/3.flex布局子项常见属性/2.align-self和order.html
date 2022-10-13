@@ -1,0 +1,52 @@
+<!-- 
+    align-self控制子项自己在侧轴上的排列方式
+        align-self: 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性;
+        属性                    说明
+        auto        默认值,表示继承父元素的align-items属性
+        flex-start  从上到下
+        flex-end    从下到上
+        center      挤在一起居中(垂直居中)
+        stretch     没有父元素则为stretch
+
+    order: 属性定义项目的排列顺序;
+        数值越小，排列越靠前，默认为0.
+        注意:和z-index不一样。
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <style>
+        /* 需求只要3号盒子下来底侧 */
+        div {
+            display: flex;
+            width: 80%;
+            height: 300px;
+            background-color: pink;
+        }
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: red;
+            margin-right: 5px;
+        }
+        div span:last-child {
+            align-self: flex-end;
+        }
+        /* 需求：把1号和2号盒子换位置 */
+        div span:nth-child(2) {
+            order: -1;
+        }
+    </style>
+ </head>
+ <body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+ </body>
+ </html>

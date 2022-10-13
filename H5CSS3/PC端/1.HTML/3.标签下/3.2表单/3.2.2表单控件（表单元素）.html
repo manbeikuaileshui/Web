@@ -1,0 +1,132 @@
+<!-- 在表单域中可以定义各种表单元素，这些表单元素就是允许用户在表单中输入或者选择的内
+容控件。
+表单元素的分类：
+1.input输入表单元素
+<input>标签用于收集用户信息，是一个单标签。
+<input type="属性值">
+type属性设置不同的属性值用来指定不同的控件类型
+type属性的属性值及其描述如下：
+属性值                                 描述
+button           定义可点击按钮（多数情况下，用于通过JavaScript启动脚本）
+checkbox         定义复选框
+file             定义输入字段和“浏览”按钮，供文件上传
+hidden           定义隐藏的输入字段
+image            定义图像形式的提交按钮
+password         定义密码字段，该字段中的字符被掩码
+radio            定义单选按钮
+reset            定义重置按钮，重置按钮会清除表单中的所有数据
+submit           定义提交按钮，提交按钮会把表单数据发送到服务器
+text             定义单行的输入字段，用户可在其中输入文本，默认宽度为20个字符
+
+除type属性外，<input>标签还有其他很多属性，其常用属性如下
+属性          属性值            描述
+name       由用户自定义   定义input元素的名称
+value      由用户自定义   规定input元素的值
+checked    checked       规定此input元素首次加载时应当被选中
+maxlength  正整数         规定输入字段中的字符的最大长度
+<1> name和value是每个表单元素都有的属性值，主要给后台人员使用。
+<2> name表单元素的名字，要求单选按钮和复选框都要有相同的name值。
+<3> checked属性主要针对于单选按钮和复选框，主要作用以打开页面，就 默认选中某个表单元素
+<4> maxlength是用户可以在表单元素输入的最大字符数，一般较少使用。
+
+<label>标签为input元素定义标注（标签）
+<label>标签用于绑定一个表单元素，当点击<lable>标签内的文本时，浏览器就会自动将
+       焦点（光标）转到或者选择对应的表单元素上，用来增加用户体验。
+语法：
+<label for="sex">男</label>
+<input type="radio" name="sex" id=" sex">
+核心：<lable>标签的for属性应当与相关元素的id属性相同。
+
+2.select下拉表单元素
+  <1> 使用场景：在页面中，如果有多个选项让用户选择，并且想要节约页面空间，我们
+      可以使用<select>标签控件定义下拉列表
+  <2> <select>中至少包含一对<option>
+  <3> 在<option>中定义selected="selected"时，当前项即为默认选中项
+  <4> 语法：<select>
+             <option>选项1</option>
+             <option>选项2</option>
+             <option>选项3</option>
+                ......
+            </select>
+
+3.textarea文本域元素
+  <1> 使用场景：当用户输入的内容较多的情况下，我们就不能使用文本框表单了，此时
+               我们可以使用<textarea>标签。
+  <2> 在表单元素中，<textarea>标签是用于定义多行文本输入的控件。
+  <3> close="每行中的字符数"，rows="显示的行数"，我们在实际开发中不会使用，
+      都是用CSS来改变大小的
+  <4> 语法：<textarea rows"3" cols="20">
+              文本内容
+            </textarea>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+</head>
+<body>
+    <form action="xxx.php" method="get">
+        <!-- text 文本框 用户可以输入任何文字 -->
+        <label for="text">用户名：</label>
+        <input type="text" name="username" value="请输入用户名" maxlength="6" id="text"><br><br>
+
+        <!-- password 密码框 用户看不见输入的密码 -->
+        <label for="password">密码：</label>
+        <input type="password" name="pwd" id="password"><br><br>
+
+        <!-- radio 单选按钮 可以实现多选一 -->
+        <!-- name是表单元素名字，这里性别单选按钮必须有相同的名字name，
+             才可以实现多选一 -->
+        性别：
+        <label for="nan">男</label>
+        <input type="radio" name="sex" value="男" id="nan">
+        <label for="nv">女</label>
+        <input type="radio" name="sex" value="女" id="nv">
+        <label for="renyao">人妖</label>
+        <input type="radio" name="sex" value="人妖" checked="checked" id="renyao"><br><br>
+
+        <!-- checkbox 复选框 可以实现多选  -->
+        爱好：
+        <label for="chouyan">抽烟</label>
+        <input type="checkbox" name="hobby" value="抽烟" checked="checked" id="chouyan">
+        <label for="hejiu">喝酒</label>
+        <input type="checkbox" name="hobby" value="喝酒" checked="checked" id="hejiu"> 
+        <label for="damajiang">打麻将</label>
+        <input type="checkbox" name="hobby" value="打麻将" checked="checked" id="damajiang"><br><br>
+<!-- 单选按钮和复选框可以设置checked属性，当页面打开的时候就可以默认选中这个按钮 -->
+
+        籍贯：
+        <select>
+            <option>山东</option>
+            <option>广东</option>
+            <option>广西</option>
+            <option>北京</option>
+            <option>福建</option>
+            <option selected="selected">火星</option>
+        </select><br><br>
+
+        <!-- 文件域 使用场景 上传文件适用的 -->
+        <label for="touxiang">上传头像</label>
+        <input type="file" id="touxiang"><br><br>
+
+        <label for="shoujihao"></label>
+        <input type="text" name="tele" value="请输入手机号" maxlength="11" id="shoujihao">
+        <!-- 普通按钮 后期结合JS搭配使用 -->
+        <input type="button" value="获取短信验证码"><br><br>
+
+        <!-- 点击了提交按钮，可以把表单域form里面的表单元素里面的值提交给后台服务器 -->
+        <input type="submit" value="免费注册">
+
+        <!-- 重置按钮可以还原表单元素初始的默认状态 -->
+        <input type="reset" value="重新填写"><br><br>
+
+        反馈：<br>
+        <textarea cols="50" rows="5">请输入您的反馈内容</textarea>
+
+    </form>
+</body>
+</html>

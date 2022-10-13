@@ -1,0 +1,33 @@
+<!-- 
+    1.语法：
+        transform-origin: x y;
+    2.重点
+        ①注意后面的参数x和y用空格隔开
+        ②x和y默认转换的中心点是元素的中心点(50% 50%)
+        ③还可以给x和y设置像素或者方位名词(top、bottom、left、right、center)
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+            margin: 200px auto;
+            transition: all 1s;
+            transform-origin: left bottom;
+        }
+        div:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+ </head>
+ <body>
+    <div></div>
+ </body>
+ </html>
